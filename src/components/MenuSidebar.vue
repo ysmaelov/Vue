@@ -16,8 +16,44 @@
     components: {
       SidebarMenu
     },
+    props: {
+      collapsed: {
+        type: Boolean,
+        default: false
+      },
+      width: {
+        type: String,
+        default: '350px'
+      },
+      widthCollapsed: {
+        type: String,
+        default: '50px'
+      },
+      showChild: {
+        type: Boolean,
+        default: true
+      },
+      theme: {
+        type: String,
+        default: ''
+      },
+      showOneChild: {
+        type: Boolean,
+        default: false
+      },
+      rtl: {
+        type: Boolean,
+        default: false
+      }
+    },
     data() {
       return {
+        isCollapsed: this.collapsed,
+        mobileItem: null,
+        mobileItemPos: 0,
+        mobileItemHeight: 0,
+        closeTimeout: null,
+        activeShow: null,
         menu: [
           {
             header: true,

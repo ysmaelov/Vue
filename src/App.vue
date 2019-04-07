@@ -20,10 +20,13 @@ export default {
 </script>
 
 <style>
+  #app{
+    padding-left: 350px;
+  }
 #menu{
-  position: left;
-}
+  width: 178px;
+  height: 100%;
+  float:left;}
   #main{
-    position: relative;
   }
 </style>
