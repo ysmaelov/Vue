@@ -1,8 +1,8 @@
 <template>
   <grid-layout
     :layout.sync="testLayout"
-    :col-num="12"
-    :row-height="30"
+    :col-num="3"
+    :row-height="60"
     :is-draggable="true"
     :is-resizable="true"
     :is-mirrored="false"
@@ -30,11 +30,13 @@
   import 'vue-grid-layout/public/app.css'
   import HelloWorld from "./HelloWorld";
   import MenuSidebar from './MenuSidebar'
+  import GridData from './GridData'
+
   let testLayout = [
-    {is:'HelloWorld',"x":0,"y":0,"w":2,"h":2,"i":"0"},
-    {is:'MenuSidebar',"x":2,"y":0,"w":2,"h":4,"i":"1"},
-   /* {"x":4,"y":0,"w":2,"h":5,"i":"2"},
-    {"x":6,"y":0,"w":2,"h":3,"i":"3"},
+    {is:'HelloWorld',"x":0,"y":0,"w":1,"h":2,"i":"0"},
+    {is:'MenuSidebar',"x":2,"y":0,"w":1,"h":2,"i":"1"},
+   {is:'GridData',"x":4,"y":0,"w":2,"h":5,"i":"2"},
+    /* {"x":6,"y":0,"w":2,"h":3,"i":"3"},
     {"x":8,"y":0,"w":2,"h":3,"i":"4"},
     {"x":10,"y":0,"w":2,"h":3,"i":"5"},
     {"x":0,"y":5,"w":2,"h":5,"i":"6"},
@@ -57,7 +59,8 @@
       HelloWorld,
       GridLayout,
       MenuSidebar,
-      GridItem
+      GridItem,
+      GridData
     },
     data(){
           return {testLayout,

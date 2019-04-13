@@ -82,6 +82,11 @@
             href: '/GridLayouts',
             title: 'GridLayouts',
             icon: 'fa fa-chart-area',
+          },
+          { // item with child
+            href: '/GridData',
+            title: 'GridData',
+            icon: 'fa fa-chart-area',
           }
         ]
       }
