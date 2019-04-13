@@ -1,6 +1,6 @@
 <template>
-  <div id="people">
-    <v-client-table :data="tableData" :columns="columns" :options="options"></v-client-table>
+  <div id="gridData">
+    <v-client-table  :data="tableData" :columns="columns" :options="options"></v-client-table>
   </div>
 </template>
 
@@ -12,9 +12,12 @@
 
   export default {
         name: "GridData",
-        data() {
+
+    data() {
           return {
             columns: ['id', 'name', 'age'],
+            css:'bulma',
+
             tableData: [
               {id: 1, name: "John", age: "20"},
               {id: 2, name: "Jane", age: "24"},
@@ -25,13 +28,42 @@
             options: {
               // see the options API
               columnsDropdown:true,
-            }
+            },
+            template: 'default'
           }
         }
     }
 </script>
 
 <style scoped>
+  #gridData {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .VuePagination {
+    text-align: center;
+  }
+
+  .vue-title {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .vue-pagination-ad {
+    text-align: center;
+  }
+
+  .glyphicon.glyphicon-eye-open {
+    width: 16px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  th:nth-child(3) {
+    text-align: center;
+  }
+
   .VueTables__child-row-toggler {
     width: 16px;
     height: 16px;
